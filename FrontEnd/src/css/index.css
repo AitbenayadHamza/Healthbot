@@ -1,0 +1,21 @@
+.custom-scroll {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: #b4d59a; /* Color of the scrollbar track */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #436850; /* Color of the scrollbar thumb */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #31503c; /* Color of the scrollbar thumb on hover */
+}
