@@ -7,12 +7,6 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
     palette: {
-        primary: {
-            main: "#E3D026",
-            light: "#E9DB5D",
-            dark: "#A29415",
-            contrastText: "#242105",
-        },
         ochre: {
             main: "rgb(255,255,255,0.2)",
         },
@@ -63,16 +57,10 @@ function ExpandingTextField({ onMessagesend }) {
                         placeholder="What is your question today?"
                         style={{ width: "99%" }}
                         InputProps={{
-                            style: {
-                                textAlign: "top", // Align text to start from the top
+                            style: {                            
                                 borderColor: "red",
                                 color: "white",
                                 borderRadius: "15px",
-                                "&:focus": {
-                                    // Define styles for focused state
-                                    borderColor: "red", // Change border color when focused
-                                    boxShadow: "0 0 0 0.2rem rgba(163, 147, 21, 0.25)", // Add box shadow when focused
-                                },
                             },
                         }}
                     />

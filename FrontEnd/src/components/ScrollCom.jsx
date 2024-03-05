@@ -10,7 +10,7 @@ function ScrollableComponent({dicution}) {
                 <div style={{display:"flex",justifyContent:"center",color:"white"}}>
             <h1>HealthBot</h1>
             </div>
-            <Divider style={{marginTop:"40px", borderColor:"white", opacity:"0.4"}} />
+            <Divider style={{marginTop:"40px", borderColor:"white", opacity:"0.2"}} />
             <div>
                 {dicution}
                 </div>

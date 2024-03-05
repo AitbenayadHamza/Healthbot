@@ -8,10 +8,10 @@ import Divider from '@mui/material/Divider';
 export default function Message({ message, title }) {
     return (
         <div style={{ width: "950px" }}>
-            <Card sx={{ backgroundColor: "#436850", color: "white", boxShadow: "0px 0px 0px 0px" }}>
+            <Card sx={{ backgroundColor: "#12372A", color: "white", boxShadow: "0px 0px 0px 0px" }}>
                 <CardHeader
                     avatar={
-                        <Avatar sx={{ backgroundColor: "#436850", color: "white" }} aria-label="recipe">
+                        <Avatar sx={{ backgroundColor: "#12372A", color: "white" }} aria-label="recipe">
                             <svg fill="white" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#436850">
                                 <g id="SVGRepo_iconCarrier">
                                     <title>health</title>
@@ -28,7 +28,7 @@ export default function Message({ message, title }) {
                     <Typography variant="subtitle2" color="white" style={{ width: "100%", fontSize: "16px", whiteSpace: "pre-line" }}>
                         {message}
                     </Typography>
-                    <Divider style={{ marginTop: "40px", borderColor: "white", opacity: "0.4" }} />
+                    <Divider style={{ marginTop: "40px", borderColor: "white", opacity: "0.1" }} />
                 </CardContent>
             </Card>
         </div>

@@ -1,0 +1,18 @@
+.background {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #12372A
+}
+
+.contain {
+    width: 50%;
+    height: 80%;
+    background-color: #0b261d;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 11px 11px 30px 1px black;
+    border: 1px solid #12372A;
+}
