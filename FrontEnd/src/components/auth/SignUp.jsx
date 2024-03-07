@@ -44,31 +44,31 @@ function SignUp() {
     setShowPasswordCom(prevShowPassword => !prevShowPassword);
   };
 
-  const { signup } = useAuth(); 
+  const { signup } = useAuth();
 
-async function handleSubmit(e) {
-  e.preventDefault();
-  if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-    return setError('Passwords do not match');
-  }
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+      return setError('Passwords do not match');
+    }
 
-  try {
-    setError('');
-    setLoading(true);
-    await signup(emailRef.current.value, passwordRef.current.value); // Call signup instead of sing
-  } catch (error) {
-    setError('Failed to create an account: ' + error.message);
-  } finally {
-    setLoading(false);
+    try {
+      setError('');
+      setLoading(true);
+      await signup(emailRef.current.value, passwordRef.current.value); // Call signup instead of sing
+    } catch (error) {
+      setError('Failed to create an account: ' + error.message);
+    } finally {
+      setLoading(false);
+    }
   }
-}
   return (
     <ThemeProvider theme={theme}>
       <div className='background'>
         <div className='contain'>
           <Container component="main" style={{ width: "80%" }}>
             <CssBaseline />
-            
+
             <Box
               sx={{
                 marginTop: 8,
@@ -140,13 +140,14 @@ async function handleSubmit(e) {
                   fullWidth
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
-                  color='white'
+                  color="white"
+                  style={{ color: loading ? 'white' : 'black' }}
                   disabled={loading}
                 >
                   {loading ? 'Signing Up...' : 'Sign Up'}
                 </Button>
               </Box>
-              
+
             </Box>
           </Container>
         </div>

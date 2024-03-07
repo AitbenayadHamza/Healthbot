@@ -9,7 +9,7 @@ export default function Message({ message, title }) {
     return (
         <div style={{ width: "950px" }}>
             <Card sx={{ backgroundColor: "#12372A", color: "white", boxShadow: "0px 0px 0px 0px" }}>
-                <CardHeader
+                <CardHeader 
                     avatar={
                         <Avatar sx={{ backgroundColor: "#12372A", color: "white" }} aria-label="recipe">
                             <svg fill="white" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#436850">
@@ -22,7 +22,9 @@ export default function Message({ message, title }) {
                         </Avatar>
                     }
                     title={title}
-                    subheader="September 14, 2016"
+                    subheader={
+                        <p style={{color:"white"}}>September 14, 2016</p>
+                    }
                 />
                 <CardContent>
                     <Typography variant="subtitle2" color="white" style={{ width: "100%", fontSize: "16px", whiteSpace: "pre-line" }}>

@@ -13,7 +13,7 @@ import SvgIcon from '@mui/material/SvgIcon';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({handleLogout}) {
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
     const handleOpenUserMenu = (event) => {
@@ -25,7 +25,7 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <div style={{}}>
+        <div>
             <AppBar style={{ width: "100%", backgroundColor: "#0b261d" }}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters style={{ display: "flex", justifyContent: "space-between" }}>
@@ -78,7 +78,7 @@ function ResponsiveAppBar() {
                                 onClose={handleCloseUserMenu}
                             >
                                 {settings.map((setting) => (
-                                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                    <MenuItem key={setting} onClick={setting === "Logout" ? handleLogout : handleCloseUserMenu}>
                                         <Typography textAlign="center">{setting}</Typography>
                                     </MenuItem>
                                 ))}
