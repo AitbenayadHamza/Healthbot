@@ -5,13 +5,15 @@ import SignUp from "./components/auth/SignUp.jsx";
 import SignIn from "./components/auth/SignIn.jsx";
 import { AuthProvider } from "../context/AuthContext.jsx";
 import PrivateRoute from "../PrivateRoute.jsx"; // Adjust the path to import PrivateRoute
+import ForgotPass from './components/auth/ForgotPass.jsx';
 
 function App() {
   return (
     <AuthProvider>
       <Routes>
         <Route path="/" element={<PrivateRoute ><MainContent /></PrivateRoute>} />
-        <Route path="/signup" element={<PrivateRoute ><SignUp /></PrivateRoute>} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/resetpassword" element={<ForgotPass />} />
         <Route path="/signin" element={<SignIn />} />
       </Routes>
     </AuthProvider>

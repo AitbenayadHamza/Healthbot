@@ -11,6 +11,9 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { createTheme } from '@mui/material/styles';
 import { useAuth } from "../../../context/AuthContext";
 import Alert from '@mui/material/Alert';
+import Grid from '@mui/material/Grid';
+import { NavLink } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const theme = createTheme({
   palette: {
@@ -20,7 +23,7 @@ const theme = createTheme({
     white: {
       main: "rgb(250,250,250)",
       light: "#rgb(255,255,255)",
-      dark: "rgb(50,95,61)",
+      dark: "rgb(150,150,150,0.9)",
     },
   },
 });
@@ -45,6 +48,7 @@ function SignUp() {
   };
 
   const { signup } = useAuth();
+  const navigate = useNavigate()
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -55,7 +59,8 @@ function SignUp() {
     try {
       setError('');
       setLoading(true);
-      await signup(emailRef.current.value, passwordRef.current.value); // Call signup instead of sing
+      await signup(emailRef.current.value, passwordRef.current.value);
+      navigate('/')
     } catch (error) {
       setError('Failed to create an account: ' + error.message);
     } finally {
@@ -71,7 +76,7 @@ function SignUp() {
 
             <Box
               sx={{
-                marginTop: 8,
+                marginTop: 2,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -146,8 +151,14 @@ function SignUp() {
                 >
                   {loading ? 'Signing Up...' : 'Sign Up'}
                 </Button>
+                <Grid container>
+                    <Grid item xs>
+                          </Grid>
+                              <Grid item>
+                              <p style={{color:"white"}}>Already have an account?<NavLink to="/signin" style={{color:"#03c27f", fontWeight:"400" , textDecoration:"none"}} > SignIn</NavLink></p>
+                              </Grid>
+                          </Grid>
               </Box>
-
             </Box>
           </Container>
         </div>

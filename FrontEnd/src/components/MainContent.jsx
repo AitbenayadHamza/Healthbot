@@ -43,6 +43,7 @@ export default function MainContent() {
             <div style={{ height: "100%" }}>
                 <Grid container style={{ width: "100%", height: "100%" }}>
                 {error && <Alert severity="error">{error}</Alert>}
+                
                     {/* ************** History Gride ************** */}
                     <Grid xs={2} className="HistoryGrid">
                         <h1 style={{ color: "white" }}></h1>
