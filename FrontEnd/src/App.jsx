@@ -16,7 +16,7 @@ function App() {
         <Route path="/resetpassword" element={<ForgotPass />} />
         <Route path="/signin" element={<SignIn />} />
       </Routes>
-    </AuthProvider>
+    </AuthProvider>       
   );
 }
 

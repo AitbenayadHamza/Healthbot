@@ -9,7 +9,7 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import SvgIcon from '@mui/material/SvgIcon';
+import healthIcon from "../assets/user-md.svg"
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -26,16 +26,15 @@ function ResponsiveAppBar({handleLogout}) {
 
     return (
         <div>
-            <AppBar style={{ width: "100%", backgroundColor: "#0b261d" }}>
+            <AppBar style={{ width: "100%", backgroundColor: "#035b3e" }}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters style={{ display: "flex", justifyContent: "space-between" }}>
-                        <div style={{ display: "flex",alignItems:"center",justifyContent:"space-between" }}>
+                        <div style={{ display: "flex",alignItems:"center",justifyContent:"space-around" }}>
 
-                            <SvgIcon >
-                            <svg fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" ></g><g id="SVGRepo_tracerCarrier" ></g><g id="SVGRepo_iconCarrier"> <title>health</title> <path d="M29.125 10.375h-7.5v-7.5c0-1.036-0.839-1.875-1.875-1.875h-7.5c-1.036 0-1.875 0.84-1.875 1.875v7.5h-7.5c-1.036 0-1.875 0.84-1.875 1.875v7.5c0 1.036 0.84 1.875 1.875 1.875h7.5v7.5c0 1.036 0.84 1.875 1.875 1.875h7.5c1.036 0 1.875-0.84 1.875-1.875v-7.5h7.5c1.035 0 1.875-0.839 1.875-1.875v-7.5c0-1.036-0.84-1.875-1.875-1.875z"></path> </g></svg>                                
-                            </SvgIcon>
-
-                            <Typography
+                            
+                        <img src={healthIcon} alt="Health Icon" width={"35"} style={{color:"white", borderColor:"whit",marginLeft:"70px" }} />                          
+                        
+                            {/* <Typography
                                 variant="h6"
                                 noWrap
                                 component="a"
@@ -49,11 +48,11 @@ function ResponsiveAppBar({handleLogout}) {
                                     color: 'inherit',
                                     textDecoration: 'none',
                                     marginLeft:"2px",
-                                    fontSize:"35px"
+                                    fontSize:"27px"
                                 }}
                             >
-                                HBot
-                            </Typography>
+                                HealthBot
+                            </Typography> */}
                         </div>
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">

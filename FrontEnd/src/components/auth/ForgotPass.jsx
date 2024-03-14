@@ -20,9 +20,9 @@ const theme = createTheme({
             main: "rgb(255,255,255,0.2)",
         },
         white: {
-            main: "rgb(250,250,250)",
+            main: "rgb(25,25,25)",
             light: "#rgb(255,255,255)",
-            dark: "rgb(150,150,150,0.9)",
+            dark: "rgb(35,35,35,0.8)",
         },
     },
 });
@@ -67,7 +67,7 @@ function ForgotPass() {
                             }}
                         >
                             <Avatar src="/broken-image.jpg" />
-                            <h2 style={{ textAlign: "center", color: "white" }}>Reset Password</h2>
+                            <h2 style={{ textAlign: "center", color: "black" }}>Reset Password</h2>
                             {Error && <Alert severity="error">{Error}</Alert>}
                             {message && <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">{message}</Alert>}
                             <Box component="form" onSubmit={handleSubmit} style={{width:"100%"}}>
@@ -80,10 +80,9 @@ function ForgotPass() {
                                     label="Email Address"
                                     name="email"
                                     color='white'
-                                    focused
                                     autoComplete="email"
                                     inputRef={emailRef}
-                                    InputProps={{ style: { color: "white" } }}
+                                    InputProps={{ style: { color: "black" } }}
                                 />
                                 <Button
                                     type="submit"
@@ -91,17 +90,17 @@ function ForgotPass() {
                                     variant="contained"
                                     sx={{ mt: 3, mb: 2 }}
                                     color="white"
-                                    style={{ color: loading ? 'white' : 'black' }}
+                                    style={{ color: loading ? 'black' : 'white' }}
                                     disabled={loading}
                                 >
                                     {loading ? 'Sending...' : 'Send'}
                                 </Button>
                                 <Grid container>
                                     <Grid item xs>
-                                    <NavLink to="/signin" style={{color:"#03c27f", fontWeight:"600" , textDecoration:"none"}} ><p>SignIn</p></NavLink>
+                                    <NavLink to="/signin" style={{color:"black", fontWeight:"700" , textDecoration:"none"}} ><p>SignIn</p></NavLink>
                                     </Grid>
                                     <Grid item>
-                                    <p style={{color:"white"}}>Don't have an account?<NavLink to="/signup" style={{color:"#03c27f", fontWeight:"400" , textDecoration:"none"}} > SignUp</NavLink></p>                                    </Grid>
+                                    <p style={{color:"black"}}>Don't have an account?<NavLink to="/signup" style={{color:"black", fontWeight:"700" , textDecoration:"none"}} > SignUp</NavLink></p>                                    </Grid>
                                 </Grid>
                             </Box>
                         </Box>

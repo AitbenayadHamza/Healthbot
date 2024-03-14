@@ -4,14 +4,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000ea;
+  background-color: #86A789;
 }
 
 .contain {
   width: 50%;
   height: 80%;
-  background-color: #0b261daa;
+  background-color: #D2E3C8;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0px 0px 20px #000000;
+  box-shadow: 5px 5px 10px #000000cc;
 }

@@ -8,10 +8,13 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
     palette: {
         ochre: {
-            main: "rgb(255,255,255,0.2)",
+            main: "rgb(0,0,0,0.2)",
         },
         ochre2: {
-            main: "rgb(255,255,255)",
+            main: "rgb(0,0,0)",
+        },
+        ochre3: {
+            main: "#035b3e",
         },
     },
 });
@@ -52,14 +55,13 @@ function ExpandingTextField({ onMessagesend }) {
                         label=""
                         id="fullWidth"
                         maxRows={2}
-                        color="ochre"
-                        focused
+                        color="ochre2"
                         placeholder="What is your question today?"
                         style={{ width: "99%" }}
                         InputProps={{
                             style: {                            
                                 borderColor: "red",
-                                color: "white",
+                                color: "black",
                                 borderRadius: "15px",
                             },
                         }}

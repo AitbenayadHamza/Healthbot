@@ -1,28 +1,58 @@
 .HistoryGrid {
-    padding-top: 100px;
-    background-color: #0b261d;
+    padding-top: 15px;
+    background-color: #13121274;
     padding-left: 20px;
-    box-shadow: 0.5px 0.5px 20px 0.5px black
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 }
 
 .ChatGride {
-    background-color: #12372A;
+    background-color: #D2E3C8;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 97%;
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 83%;
 }
 
-.message{
+.message {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 88%;
+    height: 80%;
     width: 100%;
 }
 
-.textField{
+.navbar {
+    height: 8%;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.textField {
     display: flex;
     justify-content: center;
     height: 12%;
-    background-color: #1c5944,
+}
+
+.logoutButton {
+    color: white;
+    width: 200px;
+    display: flex;
+    background-color: #13121256;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    padding: 4px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: 0.4s ease-in-out;
+}
+.logoutButton:hover{
+    background-color: rgba(93, 93, 94, 0.405);
 }

@@ -17,14 +17,14 @@ import { useNavigate } from 'react-router-dom';
 
 const theme = createTheme({
   palette: {
-    ochre: {
-      main: "rgb(255,255,255,0.2)",
-    },
-    white: {
-      main: "rgb(250,250,250)",
-      light: "#rgb(255,255,255)",
-      dark: "rgb(150,150,150,0.9)",
-    },
+      ochre: {
+          main: "rgb(255,255,255,0.2)",
+      },
+      white: {
+          main: "rgb(25,25,25)",
+          light: "#rgb(255,255,255)",
+          dark: "rgb(35,35,35,0.8)",
+      },
   },
 });
 
@@ -83,7 +83,7 @@ function SignUp() {
               }}
             >
               <Avatar src="/broken-image.jpg" />
-              <h2 style={{ textAlign: "center", color: "white" }}>Sign Up</h2>
+              <h2 style={{ textAlign: "center", color: "black" }}>Sign Up</h2>
               {error && <Alert severity="error">{error}</Alert>}
               <Box component="form" onSubmit={handleSubmit}>
                 <TextField
@@ -94,8 +94,7 @@ function SignUp() {
                   label="Email Address"
                   name="email"
                   color='white'
-                  InputProps={{ style: { color: "white" } }}
-                  focused
+                  InputProps={{ style: { color: "black" } }}
                   inputRef={emailRef}
                 />
                 <TextField
@@ -107,12 +106,11 @@ function SignUp() {
                   name="password"
                   color='white'
                   type={showPassword ? "text" : "password"}
-                  focused
                   inputRef={passwordRef}
                   InputProps={{
                     style: { color: "white" },
                     endAdornment: (
-                      <Button onClick={togglePasswordVisibility} style={{ color: "white" }}>
+                      <Button onClick={togglePasswordVisibility} style={{ color: "black" }}>
                         {showPassword ? <Visibility /> : <VisibilityOff />}
                       </Button>
                     )
@@ -127,13 +125,12 @@ function SignUp() {
                   type={showPasswordCom ? "text" : "password"}
                   id="passwordConfirmation"
                   color='white'
-                  focused
                   inputRef={passwordConfirmRef}
                   autoComplete="current-password"
                   InputProps={{
-                    style: { color: "white" },
+                    style: { color: "black" },
                     endAdornment: (
-                      <Button onClick={togglePasswordComVisibility} style={{ color: "white" }}>
+                      <Button onClick={togglePasswordComVisibility} style={{ color: "black" }}>
                         {showPasswordCom ? <Visibility /> : <VisibilityOff />}
                       </Button>
                     )
@@ -146,7 +143,7 @@ function SignUp() {
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
                   color="white"
-                  style={{ color: loading ? 'white' : 'black' }}
+                  style={{ color: loading ? 'black' : 'white' }}
                   disabled={loading}
                 >
                   {loading ? 'Signing Up...' : 'Sign Up'}
@@ -155,7 +152,7 @@ function SignUp() {
                     <Grid item xs>
                           </Grid>
                               <Grid item>
-                              <p style={{color:"white"}}>Already have an account?<NavLink to="/signin" style={{color:"#03c27f", fontWeight:"400" , textDecoration:"none"}} > SignIn</NavLink></p>
+                              <p style={{color:"black"}}>Already have an account?<NavLink to="/signin" style={{color:"black", fontWeight:"700" , textDecoration:"none"}} > SignIn</NavLink></p>
                               </Grid>
                           </Grid>
               </Box>

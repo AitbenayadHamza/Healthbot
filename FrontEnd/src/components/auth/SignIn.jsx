@@ -22,9 +22,9 @@ const theme = createTheme({
             main: "rgb(255,255,255,0.2)",
         },
         white: {
-            main: "rgb(250,250,250)",
+            main: "rgb(25,25,25)",
             light: "#rgb(255,255,255)",
-            dark: "rgb(150,150,150,0.9)",
+            dark: "rgb(35,35,35,0.8)",
         },
     },
 });
@@ -77,7 +77,7 @@ function SignUp() {
                             }}
                         >
                             <Avatar src="/broken-image.jpg" />
-                            <h2 style={{ textAlign: "center", color: "white" }}>Sign in</h2>
+                            <h2 style={{ textAlign: "center", color: "black" }}>Sign in</h2>
                             {Error && <Alert severity="error">{Error}</Alert>}
                             <Box component="form" onSubmit={handleSubmit}>
                                 <TextField
@@ -89,10 +89,9 @@ function SignUp() {
                                     label="Email Address"
                                     name="email"
                                     color='white'
-                                    focused
                                     autoComplete="email"
                                     inputRef={emailRef}
-                                    InputProps={{ style: { color: "white" } }}
+                                    InputProps={{ style: { color: "black" } }}
                                 />
                                 <TextField
                                     margin="normal"
@@ -104,11 +103,10 @@ function SignUp() {
                                     id="password"
                                     color='white'
                                     inputRef={passwordRef}
-                                    focused
                                     InputProps={{
-                                        style: { color: "white" },
+                                        style: { color: "black" },
                                         endAdornment: (
-                                            <Button onClick={togglePasswordVisibility} style={{ color: "white" }}>
+                                            <Button onClick={togglePasswordVisibility} style={{ color: "black" }}>
                                                 {showPassword ? <Visibility /> : <VisibilityOff />}
                                             </Button>
                                         )
@@ -121,17 +119,17 @@ function SignUp() {
                                     variant="contained"
                                     sx={{ mt: 3, mb: 2 }}
                                     color="white"
-                                    style={{ color: loading ? 'white' : 'black' }}
+                                    style={{ color: loading ? 'black' : 'white' }}
                                     disabled={loading}
                                 >
                                     {loading ? 'Signing In...' : 'Sign In'}
                                 </Button>
                                 <Grid container>
                                     <Grid item xs>
-                                        <NavLink to="/resetpassword" style={{color:"white",fontWeight:"600"}}><p>Forgot password?</p></NavLink>
+                                        <NavLink to="/resetpassword" style={{color:"black",fontWeight:"600",textDecoration:"none"}}><p>Forgot password?</p></NavLink>
                                     </Grid>
                                     <Grid item>
-                                        <p style={{color:"white"}}>Don't have an account?<NavLink to="/signup" style={{color:"#03c27f", fontWeight:"400" , textDecoration:"none"}} > SignUp</NavLink></p>
+                                        <p style={{color:"black"}}>Don't have an account?<NavLink to="/signup" style={{color:"black", fontWeight:"700" , textDecoration:"none"}} > SignUp</NavLink></p>
                                     </Grid>
                                 </Grid>
                             </Box>
