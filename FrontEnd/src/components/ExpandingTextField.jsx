@@ -31,6 +31,13 @@ function ExpandingTextField({ onMessagesend }) {
         settextvalue("");
     }
 
+    function handleKeyPress(e) {
+        if (e.key === "Enter" && textvalue.trim() !== "") {
+            handleClick();
+            e.preventDefault();
+        }
+    }
+
     return (
         <ThemeProvider theme={theme}>
             <div
@@ -51,6 +58,7 @@ function ExpandingTextField({ onMessagesend }) {
                     <TextField
                         value={textvalue}
                         onChange={handleChange}
+                        onKeyPress={handleKeyPress} // Add event listener for keypress
                         multiline
                         label=""
                         id="fullWidth"
@@ -70,9 +78,7 @@ function ExpandingTextField({ onMessagesend }) {
                 <div>
                     <Button
                         variant="outlined"
-                        onClick={() => {
-                            handleClick();
-                        }}
+                        onClick={handleClick}
                         color="ochre2"
                         style={{ padding: "15px", borderRadius: "15px" }}
                         disabled={textvalue === ""}
