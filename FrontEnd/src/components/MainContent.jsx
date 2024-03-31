@@ -112,7 +112,7 @@ export default function MainContent() {
                                 <h1>HealthBot</h1>
                             </div >
                             <Button variant="outlined" fullWidth onClick={handleNewchat} color="success">New Chat</Button>
-                            <div style={{ display: "flex", marginTop: '5px', justifyContent: "center", flexDirection: "column" }}>
+                            <div style={{ display: "flex", marginTop: '5px', justifyContent: "center", flexDirection: "column",alignItems:"center"}}>
                                 <h2>Historys</h2>
                                 {history.map((discution, index) => {
                                     return <Chip
@@ -123,7 +123,7 @@ export default function MainContent() {
                                         onDelete={() => { handleDelete(index) }}
                                         deleteIcon={<DeleteIcon />}
                                         variant="outlined"
-                                        style={{ justifyContent: "space-between",marginBottom:"5px" }}
+                                        style={{ justifyContent: "space-between",marginBottom:"5px",width:"100%"}}
                                     />
                                 })}
                             </div>

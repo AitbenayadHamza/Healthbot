@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -57,7 +56,7 @@ function SignUp() {
             await signin(emailRef.current.value, passwordRef.current.value);
             navigate(redirectpath,{replace:true});
         } catch (error) {
-            setError('Failed to create an Sign In: ' + error.message);
+            setError('Oops! It seems there was an issue signing in. Please check your email and password');
         } finally {
             setLoading(false);
         }
@@ -70,14 +69,21 @@ function SignUp() {
                         <CssBaseline />
                         <Box
                             sx={{
-                                marginTop: 8,
+                                marginTop: 2,
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
                             }}
                         >
-                            <Avatar src="/broken-image.jpg" />
-                            <h2 style={{ textAlign: "center", color: "black" }}>Sign in</h2>
+                        
+                            <svg fill="black" viewBox="0 0 24 32" version="1.1" xmlns="http://www.w3.org/2000/svg" width={"65px"}>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>health</title>
+                                        <path d="m14,18.184v-4.184h-5.021v4.277c.595.346,1,.984,1,1.723,0,1.105-.895,2-2,2s-2-.895-2-2c0-.738.405-1.376,1-1.723v-4.275c-2.747.012-4.979,2.248-4.979,4.998v5h10v-3c0-1.302.839-2.402,2-2.816Zm3-4.184h-1v4.184c1.161.414,2,1.514,2,2.816v3h4v-5c0-2.757-2.243-5-5-5Zm-2,6c-.552,0-1,.448-1,1v3h2v-3c0-.552-.448-1-1-1Zm-2.979-8c-3.309,0-6-2.691-6-6S8.713,0,12.021,0s6,2.691,6,6-2.691,6-6,6Zm0-9c-1.654,0-3,1.346-3,3s1.346,3,3,3,3-1.346,3-3-1.346-3-3-3Z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            <h2 style={{color: "black" }}>Sign In</h2>
                             {Error && <Alert severity="error">{Error}</Alert>}
                             <Box component="form" onSubmit={handleSubmit}>
                                 <TextField
